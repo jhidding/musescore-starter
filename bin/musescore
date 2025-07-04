@@ -1,0 +1,9 @@
+#!/bin/bash
+
+prefix=$(realpath "$(dirname "${BASH_SOURCE[0]}")/..")
+image_dir="${prefix}/share/musescore"
+latest_image=$(ls -1 "${image_dir}/*.AppImage" | tail -n1)
+
+chmod +x "${image_dir}/${latest_image}"
+exec "${image_dir}/${latest_image}"
+

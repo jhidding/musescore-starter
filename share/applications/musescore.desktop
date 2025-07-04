@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=MuseScore Studio
+GenericName=Music Editor
+Comment=The Worlds most popular notation app
+Exec=/home/johannes/.local/bin/musescore
+Icon=musescore
+Terminal=false
