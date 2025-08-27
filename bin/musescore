@@ -2,8 +2,9 @@
 
 prefix=$(realpath "$(dirname "${BASH_SOURCE[0]}")/..")
 image_dir="${prefix}/share/musescore"
-latest_image=$(ls -1 "${image_dir}/*.AppImage" | tail -n1)
-
-chmod +x "${image_dir}/${latest_image}"
-exec "${image_dir}/${latest_image}"
+echo "Searching images in: $image_dir"
+latest_image=$(ls -1 "${image_dir}"/*.AppImage | tail -n1)
+echo "Using latest image: $latest_image"
+chmod +x "${latest_image}"
+exec "${latest_image}"
 
